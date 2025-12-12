@@ -96,9 +96,7 @@ h2{
 }
 
 
-.duties { 
-    max-width: 80%;
-}
+
 
 
 .block-img {
@@ -120,7 +118,7 @@ h2{
     .banners {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1000px;
+        max-width: 1200px;
     }
 
     .team-builder, .karma {
