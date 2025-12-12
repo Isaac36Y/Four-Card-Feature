@@ -1,0 +1,140 @@
+:root {
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --transparent-cyan: #45d3d388;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
+    --grey400: #697077;
+    --grey500: #4c4e61;
+    --white: #fff; 
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: var(--white);
+    color: var(--grey500);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    gap: 3rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.title, .subtitle {
+    margin: 0;
+}
+
+
+h1 {
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0;
+}
+h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--grey400);
+    margin: 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.banners {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 450px;
+}
+
+.block { 
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 0.5rem 1rem 0 var(--transparent-cyan);
+    border-radius: 0.5rem;
+}
+
+.supervisor {
+    border-top: 0.3rem solid var(--cyan)
+}
+.team-builder {
+    border-top: 0.3rem solid var(--red)
+}
+.karma {
+    border-top: 0.3rem solid var(--orange)
+}
+.calculator {
+    border-top: 0.3rem solid var(--blue)
+}
+
+
+.duties { 
+    max-width: 80%;
+}
+
+
+.block-img {
+    max-width: 4rem;
+    align-self: flex-end;
+    padding: 1rem
+}
+
+@media only screen and (min-width: 850px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subheading {
+        max-width: 60%;
+    
+    }
+    
+    .banners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+
+    .team-builder, .karma {
+        grid-column: 2 / 3;
+    }
+
+    .calculator{
+        grid-column: 3 / 4;
+    }
+    .supervisor, .calculator {
+        grid-row: 1 / span 2;
+        align-self: center;
+    }
+    .role {
+        font-size: 1.5rem;
+    }
+}
